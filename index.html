@@ -1,22 +1,445 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-     <head>
-             <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-             <title>Снег для сайта | pcvector.net</title>
-			 <link rel="shortcut icon" href="/favicon.ico" />
-			 <style type="text/css">
-			 body {background: #3B679E;}
-			 a {color:#fff;}
-			 </style>
-			 <script type="text/javascript" src="snowstorm.js"></script>
-	 </head>
-	 
-     <body>
-<a href="#" onclick="snowStorm.randomizeWind();return false">Сменить ветер</a> | <a href="#" onclick="snowStorm.stop();return false">Остановить снег</a>
-	 
-<!-- pcvector.net -->
-<script type="text/javascript" src="/templates/pcv/js/pcvector.js"></script>
-<!-- /pcvector.net -->
-     </body>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 
-</html>	 
+:root{
+--body-background-color: #fff;
+--background-secondary-color: #F5F4FA;
+--accent-color: #2196F3;
+--hover-color: #188CE8;
+--main-footer: #2F303A;
+--dark-grey: #212121;
+--button-text-color: #fff;
+--light-black-color: #757575;
+--footer-main-color: #fff;
+--footer-secondary-color: rgba(255, 255, 255, 0.6);
+--header-border-color: #ECECEC;
+
+}
+
+body{
+font-family: Roboto, sans-serif;
+margin: 0;
+color: var(--dark-grey);
+}
+
+header{
+padding: 0 20px;
+position: sticky;
+display: grid;
+grid-template-columns: 1fr 0.75fr;
+place-items: center;
+height: 80px;
+background: var(--body-background-color);
+top: 0px;
+border-bottom: 1px solid var(--header-border-color);
+z-index: 2;
+}
+
+nav{
+display: flex;
+place-items: center;
+}
+
+.logo{
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+color: black;
+text-decoration: none;
+letter-spacing: 0.03em;
+padding: 0;
+
+}
+
+.logo-span{
+color: var(--accent-color);
+}
+
+header a{
+color: black;
+text-decoration: none;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 0.16;
+margin: 0 25px;
+letter-spacing: 0.02em;
+transition: 0.25s;
+}
+
+
+.nav-feedback a{
+color: var(--light-black-color);
+}
+
+
+.nav-link > li,
+.nav-feedback > li{
+display: inline;
+list-style: none;
+white-space: nowrap;
+}
+
+.nav-link .nav-active{
+color: var(--accent-color);
+}
+
+.nav-link a:hover,
+.nav-feedback a:hover,
+.nav-link a:focus,
+.nav-feedback a:focus{
+color: var(--hover-color);
+}
+
+.main{
+display: grid;
+place-items: center;
+align-content: center;
+width: 100%;
+height: 600px;
+left: 0px;
+top: 80px;
+background-color: var(--main-footer);
+color: var(--footer-main-color);
+}
+
+.main h1{
+font-weight: 900;
+width: 45%;
+font-size: 44px;
+line-height: 1.36;
+margin: 0;
+
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+
+.main button{
+cursor: pointer;
+margin-top: 30px;
+width: 216px;
+height: 50px;
+color: var(--footer-main-color);
+background: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+border: 0;
+
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+
+transition: 0.25s;
+}
+
+.main button:hover{
+background: var(--hover-color);
+}
+
+.features{
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
+.features h2{
+display: none;
+
+margin: 0;
+margin-bottom: 50px;
+font-weight: 700;
+font-size: 36px;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+
+.features ul{
+display: flex;
+justify-content: center;
+padding: 0;
+margin: 0;
+}
+
+.features ul > li{
+display: flex;
+flex-direction: column;
+padding: 0 15px;
+list-style: none;
+}
+
+.features-container{
+display: grid;
+width: 270px;
+height: 120px;
+background: var(--background-secondary-color);
+margin-bottom: 30px;
+border-radius: 4px;
+place-items: center;
+}
+
+.features h3{
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.features p{
+width: 270px;
+font-size: 14px;
+line-height: 1.71;
+
+letter-spacing: 0.03em;
+
+color: var(--light-black-color);
+}
+
+.what-we-do{
+display: grid;
+place-items: center;
+align-content: center;
+padding-bottom: 94px;
+}
+
+.what-we-do h2{
+margin: 0;
+margin-bottom: 50px;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--dark-grey);
+}
+
+.what-we-do ul{
+margin-top: 0;
+display: flex;
+padding-left: 0;
+place-items: center;
+}
+
+.what-we-do ul > li{
+margin: 0 15px;
+list-style: none;
+}
+
+.our-command{
+display: grid;
+place-items: center;
+padding-top: 94px;
+padding-bottom: 94px;
+background: var(--background-secondary-color);
+}
+
+.our-command h2{
+margin: 0;
+margin-bottom: 50px;
+font-weight: 700;
+font-size: 36px;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+.our-command-viewbox{
+margin-top: 0;
+display: flex;
+padding-left: 0;
+place-items: center;
+}
+
+.our-command-viewbox > li{
+background: var(--button-text-colors);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 30px;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+margin: 0 15px;
+list-style: none;
+}
+
+.our-command-viewbox > li h3{
+margin-top: 30px;
+margin-bottom: 10px;
+font-weight: 500;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+.our-command-viewbox > li p{
+margin-top: 0;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--light-black-color);
+}
+
+
+footer{
+padding: 60px 10%;
+background: var(--main-footer);
+}
+
+.logo-footer{
+color: var(--footer-main-color);
+}
+
+.address-list{
+padding-left: 0px;
+margin-top: 15.5px;
+margin-bottom: 0;
+}
+.address-list > li{
+list-style: none;
+padding: 4.5px;
+}
+
+footer address{
+font-style: normal;
+}
+
+.address-list .location{
+text-decoration: none;
+font-style: normal;
+font-size: 14px;
+line-height: 1.71;
+
+letter-spacing: 0.03em;
+
+color: var(--footer-main-color);
+}
+
+.address-list a{
+text-decoration: none;
+font-style: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--footer-secondary-color);
+transition: 0.25s;
+}
+
+.address-list a:hover,
+.address-list a:focus{
+color: var(--hover-color);
+}
+
+footer h3{
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--hover-color);
+}
+
+/*PORTFOLIO*/
+
+.portfolio{
+display: grid;
+place-items: center;
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
+.sort-buttons{
+margin: 0;
+margin-bottom: 50px;
+display: flex;
+place-items: center;
+}
+
+.sort-buttons > li{
+padding: 0 4px;
+list-style: none;
+}
+
+.sort-buttons button{
+padding: 8px 22px;
+cursor: pointer;
+background: var(--background-secondary-color);
+border-radius: 4px;
+border: 0;
+font-family: Roboto, sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--dark-grey);
+transition: 0.25s;
+}
+.all-button {
+padding: 8px 25px;
+}
+.sort-buttons .active-button,
+.sort-buttons button:hover,
+.sort-buttons button:focus{
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+color: var(--button-text-color);
+}
+
+.sort-buttons .active-button,
+.sort-buttons button:focus{
+background: var(--accent-color);
+}
+
+.sort-buttons button:hover{
+background: var(--hover-color);
+}
+
+.portfolio-list {
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto;
+list-style: none;
+}
+
+.portfolio-list li a{
+text-decoration: none;
+display: inline-block;
+background: var(--button-text-color);
+border: 1px solid #EEEEEE;
+margin: 15px;
+padding: 0;
+transition: 0.25s;
+}
+
+.portfolio-list h2{
+margin-top: 20px;
+margin-left: 24px;
+margin-right: 24px;
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+
+letter-spacing: 0.06em;
+
+color: var(--dark-grey);
+}
+
+.portfolio-list p{
+margin-left: 24px;
+margin-right: 24px;
+margin-top: 2px;
+margin-bottom: 20px;
+font-size: 16px;
+line-height: 1.88;
+
+letter-spacing: 0.03em;
+
+color: var(--light-black-color);
+}
+
+.portfolio-list li a:hover{
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+	
+</body>
+</html>
